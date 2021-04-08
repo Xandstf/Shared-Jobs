@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shared_jobs"
+            android:textSize="25sp"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dp"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/preencha_os_dados"
+            android:textSize="15sp"
+            android:gravity="center_horizontal"
+            android:paddingBottom="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <EditText
+            android:id="@+id/nomeEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/nome_completo"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+
+        <EditText
+            android:id="@+id/emailEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:hint="@string/e_mail"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+
+        <CheckBox
+            android:id="@+id/notificacoesCb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/receber_notifica_es" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contato"
+            android:paddingTop="25dp"
+            android:layout_margin="5dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/telefoneEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone"
+                android:hint="@string/telefone"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+
+            <Spinner
+                android:id="@+id/tipoTelefoneSp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:entries="@array/tipo_telefone"
+                android:padding="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/telefoneCelularEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone"
+                android:hint="@string/telefone_celular"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+
+            <Button
+                android:id="@+id/toggleTelefoneBt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/remover"
+                android:onClick="onClickButton"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sexo"
+            android:paddingTop="25dp"
+            android:layout_margin="5dp"/>
+
+        <RadioGroup
+            android:id="@+id/sexoRg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:padding="5dp"
+            android:layout_margin="5dp">
+
+            <RadioButton
+                android:id="@+id/masculinoRb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/masculino"
+                android:layout_weight="1"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/femininoRb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/feminino"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/nascimentoEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            android:hint="@string/data_de_nascimento"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/forma_o"
+            android:paddingTop="25dp"
+            android:layout_margin="5dp"/>
+
+        <Spinner
+            android:id="@+id/tipoFormacaoSp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:entries="@array/tipo_formacao"
+            android:padding="5dp" />
+
+        <LinearLayout
+            android:id="@+id/funMedLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_margin="5dp">
+
+            <EditText
+                android:id="@+id/anoFormaturaEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date"
+                android:hint="@string/ano_formatura"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/graEspLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_margin="5dp">
+
+            <EditText
+                android:id="@+id/anoConclusaoEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date"
+                android:hint="@string/ano_conclusao"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+
+            <EditText
+                android:id="@+id/instituicaoEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="@string/instituicao"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mesDouLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_margin="5dp">
+
+            <EditText
+                android:id="@+id/anoConclusaoMdEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date"
+                android:hint="@string/ano_conclusao"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+
+            <EditText
+                android:id="@+id/instituicaoMdEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="@string/instituicao"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+
+            <EditText
+                android:id="@+id/tituloMonografiaMdEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="@string/titulo_monografia"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+
+            <EditText
+                android:id="@+id/nomeOrientadorMdEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/nome_orientador"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/vagasInteresseEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="@string/vagas_de_interesse"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/salvarBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/salvar"
+            android:onClick="onClickButton"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/limparBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/limpar"
+            android:onClick="onClickButton"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+</ScrollView>
