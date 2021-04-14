@@ -38,7 +38,8 @@
             android:inputType="textPersonName"
             android:hint="@string/nome_completo"
             android:padding="5dp"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:autofillHints="@string/nome_completo"/>
 
         <EditText
             android:id="@+id/emailEt"
@@ -48,7 +49,8 @@
             android:inputType="textEmailAddress"
             android:hint="@string/e_mail"
             android:padding="5dp"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:autofillHints="@string/e_mail"/>
 
         <CheckBox
             android:id="@+id/notificacoesCb"
@@ -76,7 +78,8 @@
                 android:inputType="phone"
                 android:hint="@string/telefone"
                 android:padding="5dp"
-                android:layout_margin="5dp"/>
+                android:layout_margin="5dp"
+                android:autofillHints="@string/telefone"/>
 
             <Spinner
                 android:id="@+id/tipoTelefoneSp"
